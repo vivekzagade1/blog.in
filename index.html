@@ -1,42 +1,77 @@
 <h1>
-RESTful API in a Nutshell
-I remember the first day when I was asked the question "Do you know what are RESTful API?".
-I didnt know a darn thing about it. In fact that was just the fifth or the sixth time, I'd heard those words. RESTful API have been an integral part of my day since then. I must admit the first few lessons I got from a Youtube video were pretty confusing when he said," Designing HTTP and RESTful APIs can be tricky as there is no official and enforced standard." Well I do think now that there are many ways of implementing an API but some of them have proven in practice and are widely adopted. Here is my understanding of best practices for building HTTP and RESTful APIs.
-the contents of thou shall be the exact chronology of the way I was taught, as in:
-1. URL structure
-2. HTTP methods
-3. Creating and updating resources
-4. Designing relationships
-5. Payload formats
-6. Pagination
-7. Versioning and definitely many more.
-
-GET -> /profiles/{}
-PUT -> /profiles/{51}
-POST -> /profiles
-DELETE -> profiles/{21}
-
-Use URLs as in the above mentioned "/profile/..." to specify the resources you want to work with. Using the HTTP methods to specify what to do with this resource. With the four basic HTTP methods GET, POST, PUT,and DELETE you can provide CRUD functionality (Create, Read, Update, Delete) and beyond.(CRUD was another word that I thought was ver cool)
-Update: PATCH is another HTTP method I learnt about, which I did not use in my project. 
-These keywords were the start of the journey, I was about to go on. 
-URLs were specified in a such a way that "profile" wasn't used because it is a singular noun. Instead "profiles" as in to shown the collections of resources that were to be fetched by the beneficiary. 
-Note: Don't mix up the singular and plural forms, if not followed can be confusing.
-
-Directly on to the these topics might sound a little too excruciating. Lets start from the more basic definition.
-RESTful API: Internet sources say "REST is acronym for REpresentational State Transfer. It is architectural style for distributed hypermedia systems and was first presented by Roy Fielding in 2000 in his famous dissertation."
-In simple words "set of constraints to be used for creating Web services."
-Now to simplify some more. You use RESTful API to get information or "resources" from a certain server mapped to URL through hard-coded URL string or using various query-form verbal entities to get certain concentrated form of resource.
-Now, there are a few concepts/principle when it comes to understanding a this sophasticated piece of technology:
-1. Client-Server: Breaking down storage of resources and user beneficiary we improve the portability of the user interface across multiple platforms and improve scalability by simplifying the server components.
-2. Stateless: The request from client must contain all the necessary information to be able to understand the request.
-3. Hierarchical layers: Structured layers of resouces inaccordance with the meta-data is positive that needs to be in our favour.
-4. Uniform interfaces: Every action and every reaction in this world has a meta-meaning that has interlinked connections to the other parts of the project.
-5. Cache: When a certain part of the request of a part of the response can be saved up to use for further operations is something that needs tio kept in mind.
-
-
-Resource:
-"Any information that can be named can be a resource: a document or image, a temporal service, a collection of other resources, a non-virtual object (e.g. a person), and so on. "
-REST maps all the resources to a specific identfier which is then used in component interation. A representation consists of data, metadata describing the data and hypermedia links which can help the clients in transition to the next desired state.
-
-Resource Methods:
+	RESTful API in a Nutshell
 </h1>
+
+<p>
+	I remember the first day when I was asked the question "Do you know what are RESTful API?".
+	I didnt know a darn thing about it. In fact that was just the fifth or the sixth time, I'd heard those words. RESTful API have been an integral part of my day since then. I must admit the first few lessons I got from a Youtube video were pretty confusing when he said," Designing HTTP and RESTful APIs can be tricky as there is no official and enforced standard." Well I do think now that there are many ways of implementing an API but some of them have proven in practice and are widely adopted. Here is my understanding of best practices for building HTTP and RESTful APIs.
+	The contents of thou shall be the exact chronology of the way I was taught, as in:
+	1. URL structure
+	2. HTTP methods
+	3. Creating and updating resources
+	4. Designing relationships
+	5. Payload formats
+	6. Pagination
+	7. Versioning and definitely many more.
+</p>
+<h2>
+	GET -> /profiles/{}
+	PUT -> /profiles/{51}
+	POST -> /profiles
+	DELETE -> profiles/{21}
+</h2>	
+
+<p>
+	Use URLs as in the above mentioned "/profile/..." to specify the resources you want to work with. Using the HTTP methods to specify what to do with this resource. With the four basic HTTP methods GET, POST, PUT,and DELETE you can provide CRUD functionality (Create, Read, Update, Delete) and beyond.(CRUD was another word that I thought was ver cool)
+	Update: PATCH is another HTTP method I learnt about, which I did not use in my project. 
+	These keywords were the start of the journey, I was about to go on. 
+	URLs were specified in a such a way that "profile" wasn't used because it is a singular noun. Instead "profiles" as in to shown the collections of resources that were to be fetched by the beneficiary. 
+	Note: Don't mix up the singular and plural forms, if not followed can be confusing.
+
+	Directly on to the these topics might sound a little too excruciating. Lets start from the more basic definition.
+	RESTful API: Internet sources say "REST is acronym for REpresentational State Transfer. It is architectural style for distributed hypermedia systems and was first presented by Roy Fielding in 2000 in his famous dissertation."
+	In simple words "set of constraints to be used for creating Web services."
+	Now to simplify some more. You use RESTful API to get information or "resources" from a certain server mapped to URL through hard-coded URL string or using various query-form verbal entities to get certain concentrated form of resource.
+	Now, there are a few concepts/principle when it comes to understanding a this sophasticated piece of technology:
+</p>
+
+<h2>
+	1. Client-Server:
+</h2>
+<p>
+	Breaking down storage of resources and user beneficiary we improve the portability of the user interface across multiple platforms and improve scalability by simplifying the server components.
+</p> 
+<h2>
+	2. Stateless:	
+</h2>
+<p>
+	The request from client must contain all the necessary information to be able to understand the request.	
+</p>
+<h2>
+	3. Hierarchical layers:	
+</h2> 
+<p>
+	Structured layers of resouces inaccordance with the meta-data is positive that needs to be in our favour.	
+</p>
+<h2>
+	4. Uniform interfaces:	
+</h2>
+<p>
+	Every action and every reaction in this world has a meta-meaning that has interlinked connections to the other parts of the project.	
+</p>
+<h2>
+	5. Cache:	
+</h2>
+<p>
+	When a certain part of the request of a part of the response can be saved up to use for further operations is something that needs tio kept in mind.	
+</p>
+<h2>
+ 	Resource:
+</h2>
+<p>
+	"Any information that can be named can be a resource: a document or image, a temporal service, a collection of other resources, a non-virtual object (e.g. a person), and so on. "
+	REST maps all the resources to a specific identfier which is then used in component interation. A representation consists of data, metadata describing the data and hypermedia links which can help the clients in transition to the next desired state.
+</p>
+<h2>
+	Resource Methods:	
+</h2>

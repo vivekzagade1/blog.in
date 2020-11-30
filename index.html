@@ -125,7 +125,6 @@
 <h3>Avoid Breaking Changes</h3>
 Ideally, REST APIs (as every API) should be stable. Basically, breaking changes (like changing the whole payload format or the URL scheme) should not happen. But how can we still evolve our API without breaking the clients?
 <p>
-	<br></br>
 <br>1.Make backward-compatible changes. Adding fields is no problem (as long as the clients are tolerant).</br>
 <br>2.Duplication and Deprecation. In order to change an existing field (rename or change structure), you can add the new one next to the old field and deprecated the old one in the documentation. After a while, you can remove the old field.</br>
 <br>3.Utilize Hypermedia and HATEOAS. As long as the API client uses the links in the response to navigate through the API (and doesn’t craft the URLs manually), you can safely change the URLs without breaking the clients.</br>

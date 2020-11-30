@@ -120,3 +120,16 @@
 <p>
 	Ideally, you don’t let your clients construct URLs for using your REST API. Let’s consider an example. It’s better to provide links in your response which the client can follow.If the client exclusively relies on the links to get the salary statement, he won’t break if you change your API, since the client will always get a valid URL (as long as you update the link in case of URL changes). Another benefit is that your API becomes more self-descriptive and the clients don’t have to look up the documentation that often.
 </p>
+
+<h2>Ensure Evolvability of the API</h2>
+<h3>Avoid Breaking Changes</h3>
+Ideally, REST APIs (as every API) should be stable. Basically, breaking changes (like changing the whole payload format or the URL scheme) should not happen. But how can we still evolve our API without breaking the clients?
+<p>
+	<br></br>
+<br>1.Make backward-compatible changes. Adding fields is no problem (as long as the clients are tolerant).</br>
+<br>2.Duplication and Deprecation. In order to change an existing field (rename or change structure), you can add the new one next to the old field and deprecated the old one in the documentation. After a while, you can remove the old field.</br>
+<br>3.Utilize Hypermedia and HATEOAS. As long as the API client uses the links in the response to navigate through the API (and doesn’t craft the URLs manually), you can safely change the URLs without breaking the clients.</br>
+<br>4.Create new resources with new names. If new business requirements lead to a completely new domain model and workflows, you can create new resources. That’s often quite intuitive as the domain model has a new name anyway (derived from the business name). Example: A rental service now also rents bikes and segways. So the old concept car with the resource /cars doesn’t cut it anymore. A new domain model vehicle with a new resource /vehicles is introduced. It’s provided along with the old /cars resource.</br>
+<br>5.Keep Business Logic on the Server-Side</br>
+<br>6.Don’t let your service become a dump data access layer which provides CRUD functionality by directly exposing your database model (low-level API). This creates high coupling.</br>
+</p>

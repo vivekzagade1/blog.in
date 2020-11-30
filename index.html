@@ -15,10 +15,10 @@
 	7. Versioning and definitely many more.
 </p>
 <h2>
-	GET -> /profiles/{}
-	PUT -> /profiles/{51}
-	POST -> /profiles
-	DELETE -> profiles/{21}
+	<br>GET -> /profiles/{}</br>
+	<br>PUT -> /profiles/{51}</br>
+	<br>POST -> /profiles</br>
+	<br>DELETE -> profiles/{21}</br>
 </h2>	
 
 <p>
@@ -75,3 +75,48 @@
 <h2>
 	Resource Methods:	
 </h2>
+<p>
+	Another important thing associated with REST is resource methods to be used to perform the desired transition.
+</p>
+
+<h2>GET /employees</h2>
+<p>
+	<br>GET /employees?state=external</br>
+	<br>POST /employees</br>
+	<br>PUT /employees/56</br>
+	Use URLs to specify the resources you want to work with. Use the HTTP methods to specify what to do with this resource. With the five HTTP methods GET, POST, PUT, PATCH and DELETE you can provide CRUD functionality (Create, Read, Update, Delete) and beyond.
+
+	<br>Read: Use GET for reading resources.</br>
+	<br>Create: Use POST or PUT for creating new resources.</br>
+	<br>Update: Use PUT and PATCH for updating existing resources.</br>
+	<br>Delete: Use DELETE for deleting existing resources.</br>
+</p>
+<h2>
+	POST on the Resource URL to Create a New Resource
+</h2>
+<p>
+	The client sends a POST request to the resource collection URL /employees. The HTTP body contains the attributes of the new resource “Paul”.
+	The RESTful web service generates an ID for the new employee, creates the employee in its internal model and sends a response to the client. This response contains the status code 201 (Created) and a Location HTTP header that indicates the URL under which the created resource is accessible.
+</p>
+
+<h2>
+	PUT for Updating a Resource
+</h2>
+<p>
+	The client sends a PUT request to the single resource URL /employee/21. The HTTP body of the PUT request contains all fields of the employee and every field will be updated on the server-side.
+	The REST service updates the name and status of the employee with the ID 21 and confirms the changes with the HTTP status code 200.
+</p>
+<h2>
+	Use HTTP Status Codes
+</h2>
+<p>
+	<br>2xx – success – everything worked fine.</br>
+	<br>4xx – client error – if the client did something wrong (e.g. the client sends an invalid request or he is not authorized)</br>
+	<br>5xx – server error – failures on the server-side (errors while trying to process the request like database failures, dependend services are not available, programming errors or states that should not occur)</br>
+</p>
+<h2>
+	Provide Links for Navigating through your API (HATEOAS)
+</h2>
+<p>
+	Ideally, you don’t let your clients construct URLs for using your REST API. Let’s consider an example. It’s better to provide links in your response which the client can follow.If the client exclusively relies on the links to get the salary statement, he won’t break if you change your API, since the client will always get a valid URL (as long as you update the link in case of URL changes). Another benefit is that your API becomes more self-descriptive and the clients don’t have to look up the documentation that often.
+</p>
